@@ -1,0 +1,9 @@
+<!--pages/main/records/records.wxml-->
+<van-nav-bar border="{{false}}" fixed placeholder="{{true}}" custom-style="background: #ffffff;">
+  <view slot="title" class="nav-title">写作记录</view>
+</van-nav-bar>
+<van-tabs swipe-threshold="3" bind:change="onChange" class="tab-container" active="{{ active }}" swipeable>
+  <van-tab title="{{item.name}}" wx:for="{{tabs}}" wx:key="index">
+    <record-list datalist="{{item.data}}" hasNext="{{item.hasNext}}" index="{{index}}" bindLoadMore="onLoadMoreHistory"></record-list>
+  </van-tab>
+</van-tabs>

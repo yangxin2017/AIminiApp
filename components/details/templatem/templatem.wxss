@@ -1,0 +1,30 @@
+/* components/details/templatem/templatem.wxss */
+.tm-container{
+  padding: 0 15px;
+  margin: 10px 0 0 0;
+  height: calc(100vh - 190px);
+}
+.form{
+  margin: 0 0 20px 0;
+}
+.form .lbl{
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+}
+.form .fm{
+  margin-top: 10px;
+}
+.sel-txt{
+  display: flex;
+  height: 40px;
+  border-radius: 30px;
+  border: solid 1px #999;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+.button-con{
+  margin-top: 20px;
+}

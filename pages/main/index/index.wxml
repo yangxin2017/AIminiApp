@@ -1,0 +1,33 @@
+<view class='main-box'>
+
+  <!-- <van-nav-bar border='{{false}}' fixed placeholder='{{true}}' custom-style='background: #ffffff;'>
+    <view slot='title' class='nav-title'>weapp-template</view>
+  </van-nav-bar> -->
+
+  <image mode="scaleToFill" style="width: 100%;" src="../../../images/logo.jpg"></image>
+
+  <!-- <view class="loading" wx:if="{{loading}}">
+    <van-loading type="spinner">正在加载...</van-loading>
+  </view> -->
+
+  <view class="lists">
+    <van-row gutter="15">
+      <van-col span="12" wx:for="{{menus}}" wx:key="index">
+        <view class="card" catchtap="toDetail" data-item="{{item}}">
+          <main-card url="{{item.url}}" title="{{item.title}}" desc="{{item.desc}}"></main-card>
+        </view>
+      </van-col>
+    </van-row>
+  </view>
+
+  <view class="desc-info">
+    <text class="txt">如需使用电脑版，可在电脑微信打开小程序</text>
+    <text class="txt" style="margin-top: 20px;">防止迷路，请尽量、尽量、尽量关注公众号</text>
+    <text class="txt">左下角菜单点击每日领次数即可关注公众号</text>
+  </view>
+
+  <view class="ewm">
+    <image class="img" src="../../../images/ewm.jpg"></image>
+  </view>
+
+</view>

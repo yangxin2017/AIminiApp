@@ -1,0 +1,25 @@
+<!--pages/main/result/result.wxml-->
+<view class="banner">
+  <van-icon class="icon" name="arrow-left" bindtap="onClosePage" />
+  <text class="txt">生成底稿</text>
+  <view></view>
+</view>
+<view class="container-text">
+  <text wx:if="{{ !isLoading }}">
+  {{resultText}}
+  </text>
+  <view class="loading" wx:else>
+    <van-loading type="spinner">正在加载内容，请稍候...</van-loading>
+  </view>
+</view>
+<view class="tip">
+  <van-notice-bar
+    left-icon="info-o"
+    backgroundColor="#E7EEFE"
+    color="#4775EF"
+    text="复制内容去编辑器中编辑。"
+  />
+</view>
+<view class="button-con">
+  <van-button bind:click="copyText" type="primary" block="true" round="true" color="#4775EF">复制底稿</van-button>
+</view>

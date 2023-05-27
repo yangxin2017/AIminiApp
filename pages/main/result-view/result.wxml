@@ -1,0 +1,33 @@
+<!--pages/main/result/result.wxml-->
+<van-nav-bar left-arrow  title="信息详情"
+  bind:click-left="onClosePage" border="{{false}}" fixed placeholder="{{true}}" custom-style="background: #ffffff;">
+  
+</van-nav-bar>
+<!-- <view class="banner" fixed>
+  <van-icon class="icon" name="arrow-left" bindtap="onClosePage" />
+  <text class="txt">生成底稿</text>
+  <view></view>
+</view> -->
+<view class="container-text">
+  <text>
+    圆明园遗址公园线上门票预订页面显示，4月29日至5月1日，成人票和未成年票余票均显示为零。
+
+　　网友表示，今天上午圆明园的门票被哄抢一空，这是163年来第一次门票全部售罄。
+
+　　对此，圆明园遗址公园工作人员回应称，以前没有出现门票售空的情况，因为圆明园遗址公园属于室外博物馆，面积很大。不过现场售票窗口还有纸质票的，只是线上的票没有了。
+
+　　工作人员还表示，门票不是大家想象的那样已经急得不得了了，可以随时关注一下退票的，还是能进来的，哪天来都行。
+
+　　据悉，五一期间，圆明园实行限流政策，每日限流40000人，上下午各20000人。</text>
+</view>
+<view class="tip">
+  <van-notice-bar
+    left-icon="info-o"
+    backgroundColor="#E7EEFE"
+    color="#4775EF"
+    text="足协杯战线连续第2年上演广州德比战，上赛季半决赛上恒大以两回合5-3的总比分淘汰富力。"
+  />
+</view>
+<view class="button-con">
+  <van-button bind:click="onResult" type="primary" block="true" round="true" color="#4775EF">复制底稿</van-button>
+</view>

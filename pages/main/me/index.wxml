@@ -1,0 +1,53 @@
+<!--pages/me/index.wxml-->
+
+<view class="me-box">
+  <image style="height: 250px;width: 100%;" src="../../../images/my/bg.png"></image>
+  <view class="info">
+    <image style="height: 15px;width: 15px;" class="i1" src="/images/my/i1.png"></image>
+    <text class="txt">点数：5 | 会员时长：0天</text>
+    <van-button color="#F2D974" round size="small" bind:click="onShowCZ">立即充值</van-button>
+  </view>
+</view>
+
+<view class="list-infos">
+  <view class="md" bindtap="onShowWm">
+    <view class="tl">
+      <image style="width: 25px;height:25px;margin:0 15px 0 0;" src="/images/my/icon.png"></image>
+      <text>关于我们</text>
+    </view>
+    <van-icon class="icon" name="arrow" />
+  </view>
+  <!-- <view class="md">
+    <view class="tl">
+      <image style="width: 25px;height:25px;margin:0 15px 0 0;" src="/images/my/icon.png"></image>
+      <text>点数/会员记录</text>
+    </view>
+    <van-icon class="icon" name="arrow" />
+  </view> -->
+  <view class="md" bindtap="goOrders">
+    <view class="tl">
+      <image style="width: 25px;height:25px;margin:0 15px 0 0;" src="/images/my/icon.png"></image>
+      <text>订单记录</text>
+    </view>
+    <van-icon class="icon" name="arrow" />
+  </view>
+</view>
+
+<van-dialog
+  use-slot
+  title="温馨提示"
+  show="{{ show }}"
+>
+  <view wx:if="{{isCz}}" class="cons" style="padding: 20px 40px 0 40px;text-align: center;">
+    <text>温馨提示十分抱歉，由于苹果运营规范，小程序内暂不支持iOS端虚拟支付业务，请请在公众号内充值</text>
+    <view>
+      <image mode="aspectFit" style="width: 90%;" src="/images/my/ewm.jpg"></image>
+    </view>
+  </view>
+  <view wx:else class="cons" style="padding: 20px 40px 0 40px;text-align: center;">
+    <text>扫描二维码添加我们客服经理</text>
+    <view>
+      <image mode="aspectFit" style="width: 90%;" src="/images/lc.jpg"></image>
+    </view>
+  </view>
+</van-dialog>

@@ -1,0 +1,16 @@
+<view class="banner">
+  <van-icon class="icon" name="arrow-left" bindtap="onClosePage" />
+  <text class="txt">充值记录</text>
+  <view></view>
+</view>
+
+<view class="list-container">
+  <view class="md" wx:for="{{datalist}}" wx:key="index">
+    <view class="status"><van-icon name="passed" /> 已完成</view>
+    <view class="title">{{ item.title }}</view>
+    <view class="time">{{ item.timestr }}</view>
+  </view>
+
+  <van-button type="primary" block bind:click="LoadMore" wx:if="{{hasNext}}">点击加载更多</van-button>
+  <van-button type="primary" color="#999" disabled block wx:if="{{!hasNext}}">没有更多了</van-button>
+</view>

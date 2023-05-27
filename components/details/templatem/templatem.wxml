@@ -1,0 +1,43 @@
+<!--components/details/templatem/templatem.wxml-->
+<view class="tm-container">
+  <view class="form" wx:for="{{formConfig}}" wx:key="index">
+    <text class="lbl">{{item.title}}</text>
+    <view class="fm" wx:if="{{ item.type == 'text' }}">
+      <van-field show-word-limit value="{{ item.val }}" data-index="{{index}}" maxlength="{{item.len}}" bind:change="onChange" />
+    </view>
+    <view class="fm" wx:elif="{{ item.type == 'select' }}">
+      <view class="sel-txt" bindtap="showSheet" data-item="{{index}}">
+        <text>{{item.val}}</text>
+        <van-icon name="arrow" />
+      </view>
+      <van-action-sheet show="{{ item.show }}"
+        actions="{{ item.datas }}" data-item="{{item}}" data-index="{{index}}"
+        cancel-text="取消" bind:close="onClose" bind:select="onSelect" bind:cancel="onClose"
+      />
+    </view>
+    <view class="fm" wx:if="{{ item.type == 'textarea' }}">
+      <van-field custom-style="height: 150px;" type="textarea" autosize="{ maxHeight: 150, minHeight: 150, height: 150 }" value="{{ item.val }}" data-index="{{index}}" show-word-limit maxlength="{{item.len}}" bind:change="onChange" />
+    </view>
+    <view class="fm" wx:if="{{ item.type == 'number' }}">
+      <van-field type="digit" show-word-limit value="{{ item.val }}" data-index="{{index}}" maxlength="{{item.len}}" bind:change="onChange" />
+    </view>
+    <view class="fm" wx:if="{{ item.type == 'date' }}">
+      <view class="sel-txt" bindtap="showSheet" data-item="{{index}}">
+        <text>{{item.val}}</text>
+        <van-icon name="arrow" />
+      </view>
+      <van-calendar
+        show="{{ item.show }}"
+        type="range" data-item="{{item}}" data-index="{{index}}"
+        bind:confirm="onConfirmDate" bind:close="onClose"
+      />
+    </view>
+    <view class="fm" wx:if="{{ item.type == 'enum' }}">
+      <van-tag wx:for="{{item.datas}}" plain="{{item.val != tim.name}}" style="margin: 0 10px 5px 0;"  data-item="{{tim}}" data-index="{{ti}}" data-paindex="{{index}}" bindtap="onClickTag"
+        wx:for-item="tim" size="large" wx:for-index="ti" wx:key="ti" type="danger">{{tim.name}}</van-tag>
+    </view>
+  </view>
+  <view class="button-con">
+    <van-button bind:click="onResult" type="primary" block="true" round="true" color="#4775EF">生成底稿</van-button>
+  </view>
+</view>

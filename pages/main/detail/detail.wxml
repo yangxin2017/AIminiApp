@@ -1,0 +1,20 @@
+<!--pages/main/detail/detail.wxml-->
+<view class="banner">
+  <van-icon class="icon" name="arrow-left" bindtap="onClosePage" />
+  <text class="txt">{{title}}</text>
+  <view></view>
+</view>
+<van-tabs class="tab-container" active="{{ active }}" bind:change="onChange">
+  <van-tab title="模板模式">
+    <template-m formConfig="{{formConfig}}" tplId="{{ tplId }}"></template-m>
+  </van-tab>
+  <van-tab title="自由对话">
+    <free-m id="freeDH" tplId="{{ tplId }}"></free-m>
+  </van-tab>
+  <!-- <van-tab title="高级模式（试用）">
+    <advantage></advantage>
+  </van-tab> -->
+</van-tabs>
+
+<view class="container">
+</view>

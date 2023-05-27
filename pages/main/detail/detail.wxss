@@ -1,0 +1,30 @@
+/* pages/main/detail/detail.wxss */
+.banner{
+  background: #54B7BC;
+  height: 40px;
+  padding: 60px 10px 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.banner .icon{
+  color: #fff;font-size: 16px;
+}
+.banner .txt{
+  color: #fff;font-size: 18px;
+  font-weight: bold;
+}
+.container{
+  padding: 10px 15px;
+}
+.van-tabs__line {
+  background: #54B7BC !important;
+}
+.van-tab{
+  padding: 0 !important;
+  width: 30% !important;
+}
+
+.tab-container{
+
+}

@@ -1,0 +1,74 @@
+/* components/details/advantage/advantage.wxss */
+.advantage-container{
+  padding: 20px 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.md{
+  box-sizing: border-box;
+  flex: 0 1 48%;
+  padding: 10px;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  margin: 0 0 10px 0;
+}
+.md .title{
+  font-size: 16px;
+  color: #333;font-weight: bold;
+}
+.md .desc{
+  font-size: 14px;
+  color: #999;
+  height: 80px;
+  margin-top: 8px;
+}
+
+
+.free-container{
+  padding: 0px;
+}
+.history{
+  height: calc(100vh - 260px);
+  padding: 0px 0 0 0;
+  background-color: #f7f7f7;
+}
+.history .list{
+}
+.history .md{
+  padding: 20px 15px;
+  display: flex;
+  align-items: flex-start;
+}
+.history .md .txt{
+  font-size: 16px;
+  color: #333;
+  margin: 0 0 0 20px;
+  flex: 1;position: relative;top: 5px;
+}
+.history .md .avatar{
+  width: 30px;height: 30px;
+  background-color: #449F80;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 30px;
+}
+.history .md .avatar .icon{
+  color: #fff;font-size: 20px;
+}
+.history .md.q{
+  background-color: #fff;
+}
+.history .md.q .avatar{
+  background-color: #9DA381;
+  font-size: 20px;color: #fff;
+}
+.input-text{
+  box-sizing: border-box;
+  padding: 15px 15px 0 15px;
+  box-shadow: 0 0 10px #ccc;
+}
+.back{
+  height: 30px;
+  padding: 0 15px;
+}

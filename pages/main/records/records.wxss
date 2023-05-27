@@ -1,0 +1,12 @@
+/* pages/main/records/records.wxss */
+page {
+  background-color: #F9F9F9;
+}
+.van-tabs__line {
+  background: #54B7BC !important;
+}
+.van-tab{
+}
+.list-cons{
+  height: calc(100vh - 100px);
+}

@@ -1,0 +1,11 @@
+<!--components/records/record-list.wxml-->
+<view class="list-container">
+  <view class="md" bindtap="goDetail" wx:for="{{datalist}}" wx:key="index">
+    <view class="status"><van-icon name="passed" /> 已完成</view>
+    <view class="title">{{ item.title }}</view>
+    <view class="time">{{ item.timestr }}</view>
+  </view>
+
+  <van-button type="primary" block bind:click="LoadMore" wx:if="{{hasNext}}">点击加载更多</van-button>
+  <van-button type="primary" disabled block wx:if="{{!hasNext}}">没有更多了</van-button>
+</view>

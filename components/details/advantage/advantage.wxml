@@ -1,0 +1,45 @@
+<!--components/details/advantage/advantage.wxml-->
+<view class="advantage-container" wx:if="{{showDetail == false}}">
+  <view class="md" bindtap="setDetail">
+    <view class="title">标题标题标题标题</view>
+    <view class="desc">描述描述描述描述描述描述描述描述</view>
+  </view>
+  <view class="md">
+    <view class="title">标题标题标题标题</view>
+    <view class="desc">描述描述描述描述描述描述描述描述</view>
+  </view>
+  <view class="md">
+    <view class="title">标题标题标题标题</view>
+    <view class="desc">描述描述描述描述描述描述描述描述</view>
+  </view>
+</view>
+
+<view class="free-container" wx:if="{{showDetail == true}}">
+  <view class="back">
+    <van-icon name="arrow-left" bindtap="setDetailOff" />
+  </view>
+  <view class="history">
+    <scroll-view id="svAdvantage" scroll-top="{{scrollHeight}}" style="height: 100%" class="scroll-con"	refresher-threshold="10" scroll-y="true" refresher-enabled="true" bindrefresherrefresh="refreshData" refresher-triggered="{{triggered}}">
+      <view class="list" wx:for="{{lists}}" wx:key="index">
+
+        <view class="q md">
+          <view class="avatar">
+            我
+          </view>
+          <text class="txt">{{item.question}}</text>
+        </view>
+
+        <view class="ans md">
+          <view class="avatar">
+            <van-icon class="icon" name="smile-o" />
+          </view>
+          <text class="txt">{{item.answer}}</text>
+        </view>
+
+      </view>
+    </scroll-view>
+  </view>
+  <view class="input-text" fixed>
+    <van-field class="free-button" bind:change="changeVal" data-val="{{value}}" bind:click-icon="sendQuestion" value="{{ value }}" placeholder="请输入你的问题" right-icon="guide-o" />
+  </view>
+</view>

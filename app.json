@@ -1,0 +1,73 @@
+{
+  "pages": [
+    "pages/main/index/index",
+    "pages/main/me/index",
+    "pages/main/detail/detail",
+    "pages/main/result/result",
+    "pages/main/result-view/result",
+    "pages/main/records/records",
+    "pages/main/gongzhonghao/gongzhonghao",
+    "pages/main/authweb/authWeb",
+    "pages/main/orders/orders"
+  ],
+  "window": {
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "custom": true,
+    "list": [
+      {
+        "pagePath": "pages/main/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/main/records/records",
+        "text": "写作记录"
+      },
+      {
+        "pagePath": "pages/main/me/index",
+        "text": "我的"
+      }
+    ]
+  },
+  "subpackages": [
+    {
+      "root": "pages/activity",
+      "pages": [
+        "index/index"
+      ],
+      "independent": true
+    }
+  ],
+  "usingComponents": {
+    "advantage": "/components/details/advantage/advantage",
+    "record-list": "/components/records/record-list",
+    "main-card": "/components/main-card/main-card",
+    "template-m": "/components/details/templatem/templatem",
+    "free-m": "/components/details/free/free",
+    "time": "/components/time/index",
+    "svg-icon": "/components/svg-icon/index",
+    "unit": "/components/unit/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-picker": "@vant/weapp/picker/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-nav-bar": "@vant/weapp/nav-bar/index",
+    "van-image": "@vant/weapp/image/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-action-sheet": "@vant/weapp/action-sheet/index",
+    "van-notice-bar": "@vant/weapp/notice-bar/index",
+    "van-calendar": "@vant/weapp/calendar/index",
+    "van-tag": "@vant/weapp/tag/index",
+    "van-loading": "@vant/weapp/loading/index"
+  },
+  "lazyCodeLoading": "requiredComponents"
+}

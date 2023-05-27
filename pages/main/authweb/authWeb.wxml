@@ -1,0 +1,4 @@
+<!--pages/main/authweb/authWeb.wxml-->
+<view class="webview-container">
+  <web-view bindmessage="onRecieve" src="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx851783fcc1632a19&redirect_uri=https%3A%2F%2Fwww.warmstar.cc%2Faiwriter%2F%23%2Fhome&response_type=code&scope=snsapi_userinfo&state=miniapp#wechat_redirect"></web-view>
+</view> 

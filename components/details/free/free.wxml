@@ -1,0 +1,27 @@
+<!--components/details/free/free.wxml-->
+<view class="free-container">
+  <view class="history">
+    <scroll-view scroll-top="{{scrollHeight}}" style="height: 100%" class="scroll-con"	refresher-threshold="10" scroll-y="true" refresher-enabled="true" bindrefresherrefresh="refreshData" refresher-triggered="{{triggered}}">
+      <view class="list" wx:for="{{lists}}" wx:key="index">
+
+        <view class="q md">
+          <view class="avatar">
+            我
+          </view>
+          <text class="txt">{{item.question}}</text>
+        </view>
+
+        <view class="ans md">
+          <view class="avatar">
+            <van-icon class="icon" name="smile-o" />
+          </view>
+          <text class="txt">{{item.answer}}</text>
+        </view>
+
+      </view>
+    </scroll-view>
+  </view>
+  <view class="input-text" fixed>
+    <van-field bind:click-icon="sendQuestion" class="free-button" model:value="{{ value }}" placeholder="请输入你的问题" right-icon="guide-o" />
+  </view>
+</view>

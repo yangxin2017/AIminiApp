@@ -1,0 +1,60 @@
+/* components/details/free/free.wxss */
+.free-container{
+  padding: 0px;
+}
+.history{
+  height: calc(100vh - 230px);
+  padding: 0px 0 0 0;
+  background-color: #f7f7f7;
+}
+.history .list{
+}
+.history .md{
+  padding: 20px 15px;
+  display: flex;
+  align-items: flex-start;
+}
+.history .md .txt{
+  font-size: 16px;
+  color: #333;
+  margin: 0 0 0 20px;
+  flex: 1;position: relative;top: 5px;
+}
+.history .md .avatar{
+  width: 30px;height: 30px;
+  background-color: #449F80;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 30px;
+}
+.history .md .avatar .icon{
+  color: #fff;font-size: 20px;
+}
+.history .md.q{
+  background-color: #fff;
+}
+.history .md.q .avatar{
+  background-color: #9DA381;
+  font-size: 20px;color: #fff;
+}
+
+.input-text{
+  box-sizing: border-box;
+  padding: 15px 15px 0 15px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+.animateText{
+  animation: borders 0.7s infinite normal,
+    	widths 2s steps(13);
+}
+
+@keyframes broders {
+  from {border-right-color: #000;}
+  to {border-right-color: #fff;}
+}
+/* 容器宽的改变动画 */
+@keyframes widths {
+  from {width: 0;}
+  to {width: 100%;} /* 也可以是固定宽 */
+}

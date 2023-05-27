@@ -1,0 +1,16 @@
+/* pages/main/orders/orders.wxss */
+.banner{
+  background: #54B7BC;
+  height: 40px;
+  padding: 60px 10px 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.banner .icon{
+  color: #fff;font-size: 16px;
+}
+.banner .txt{
+  color: #fff;font-size: 18px;
+  font-weight: bold;
+}

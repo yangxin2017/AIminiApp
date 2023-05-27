@@ -1,0 +1,12 @@
+<!--components/main-card.wxml-->
+<view class="main-card">
+  <view class="img-line">
+    <image class="img" mode="widthFix" src="{{url}}"></image>
+  </view>
+  <view class="title">
+    <text>{{title}}</text>
+  </view>
+  <view class="desc">
+    <text>{{desc}}</text>
+  </view>
+</view>

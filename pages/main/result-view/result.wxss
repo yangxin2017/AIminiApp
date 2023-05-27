@@ -1,0 +1,28 @@
+/* pages/main/result/result.wxss */
+.banner{
+  background: #54B7BC;
+  height: 40px;
+  padding: 20px 10px 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.banner .icon{
+  color: #fff;font-size: 16px;
+}
+.banner .txt{
+  color: #fff;font-size: 18px;
+  font-weight: bold;
+}
+.container-text{
+  width: 80%;
+  margin: 20px auto;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 0 10px #ccc;
+  border-radius: 10px;
+}
+.button-con{
+  padding: 0 15px 20px 15px;
+  margin: 10px 0 20px 0;
+}
